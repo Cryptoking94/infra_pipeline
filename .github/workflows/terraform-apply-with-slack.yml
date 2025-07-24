@@ -17,9 +17,9 @@ jobs:
         id: slack
         uses: slackapi/slack-github-action@v1.24.0
         with:
+          channel-id: C090BQ2D5C3  # ✅ Correct usage
           payload: |
             {
-              "channel": "C090BQ2D5C3",
               "text": ":warning: *Terraform deployment waiting for approval* :construction:\n\n*Repository:* ${{ github.repository }}\n*Branch:* main\n*Action:* Terraform Apply\n\n*Approver:* <@${{ secrets.SLACK_APPROVER_USER_ID }}>\n\nReact with ✅ to approve.",
               "unfurl_links": false
             }
