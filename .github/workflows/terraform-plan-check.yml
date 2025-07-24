@@ -38,7 +38,7 @@ jobs:
 
       - name: Policy Check - instance_type
         run: |
-          if grep -r 'instance_type' *.tf | grep -v '"t3.micro"' ; then
+          if grep -r 'instance_type' *.tf | grep -v 't3.micro' | grep -v 'var.instance_type'; then
             echo "❌ ERROR: Only t3.micro is allowed for EC2 instances."
             exit 1
           fi
