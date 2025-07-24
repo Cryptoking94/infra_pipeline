@@ -2,7 +2,7 @@ provider "aws" {
   region = "ap-south-1"
 }
 # temp comment to trigger workflow
-#test iing
+
 module "vpc" {
   source              = "./modules/vpc"
   vpc_cidr            = var.vpc_cidr
