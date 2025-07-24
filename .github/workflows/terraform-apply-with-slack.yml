@@ -19,7 +19,7 @@ jobs:
         with:
           payload: |
             {
-              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "channel": "C090BQ2D5C3",
               "text": ":warning: *Terraform deployment waiting for approval* :construction:\n\n*Repository:* ${{ github.repository }}\n*Branch:* main\n*Action:* Terraform Apply\n\n*Approver:* <@${{ secrets.SLACK_APPROVER_USER_ID }}>\n\nReact with ✅ to approve.",
               "unfurl_links": false
             }
@@ -34,7 +34,7 @@ jobs:
             const { WebClient } = require("@slack/web-api");
             const token = process.env.SLACK_BOT_TOKEN;
             const web = new WebClient(token);
-            const channel = process.env.SLACK_CHANNEL_ID;
+            const channel = "C090BQ2D5C3";
 
             const delay = ms => new Promise(res => setTimeout(res, ms));
             const startTime = Date.now();
@@ -60,7 +60,6 @@ jobs:
             }
         env:
           SLACK_BOT_TOKEN: ${{ secrets.SLACK_BOT_TOKEN }}
-          SLACK_CHANNEL_ID: ${{ secrets.SLACK_CHANNEL_ID }}
 
   apply-terraform:
     name: Terraform Apply

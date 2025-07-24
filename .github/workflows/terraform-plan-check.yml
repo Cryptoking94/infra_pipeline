@@ -59,7 +59,7 @@ jobs:
         with:
           payload: |
             {
-              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "channel": "C090BQ2D5C3",
               "text": ":white_check_mark: *Terraform Plan Completed Successfully*\n\n*Repository:* ${{ github.repository }}\n*Branch:* ${{ github.ref_name }}\n*Pushed by:* ${{ github.actor }}\n\n:bulb: Please [create a Pull Request](https://github.com/${{ github.repository }}/compare/main...${{ github.ref_name }}) to start the approval process.",
               "unfurl_links": false
             }
@@ -72,7 +72,7 @@ jobs:
         with:
           payload: |
             {
-              "channel": "${{ secrets.SLACK_CHANNEL_ID }}",
+              "channel": "C090BQ2D5C3",
               "text": ":x: *Terraform Plan Failed!*\n\n*Repository:* ${{ github.repository }}\n*Branch:* ${{ github.ref_name }}\n*Triggered by:* ${{ github.actor }}\n\nPlease review the GitHub Actions log for errors.",
               "unfurl_links": false
             }
